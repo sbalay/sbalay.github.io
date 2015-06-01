@@ -4,10 +4,10 @@ export default class ShoppingItem extends React.Component {
   render() {
     return (
       <div className="shopping-item">
-        <span>{this.props.item.name}</span>
-        <span>{this.props.item.price}</span>
-        <span>{this.props.item.stock}</span>
-        <button onClick={this.handleClick.bind(this)}>Add to cart</button>
+        <h2>{this.props.item.name}</h2>
+        <h4>Price: {this.props.item.price}</h4>
+        <h4>Stock: {this.props.item.stock}</h4>
+        <button className="btn btn-default" onClick={this.handleClick.bind(this)}>Add to cart</button>
       </div>
     );
   }

@@ -3,11 +3,20 @@ import React from 'react';
 export default class NewItemForm extends React.Component {
   render() {
     return (
-      <form className="item-form" onSubmit={this.handleSubmit.bind(this)}>
-        <input type="text" placeholder="Item name" ref="name" />
-        <input type="number" step="any" min="0" placeholder="Item price" ref="price" />
-        <input type="number" placeholder="Item stock" ref="stock" />
-        <input type="submit" value="Confirm" />
+      <form className="form-inline new-item-form row" onSubmit={this.handleSubmit.bind(this)}>
+        <div className="form-group">
+          <label htmlFor="item-name">Name</label>
+          <input type="text" className="form-control" id="item-name" ref="name" />
+        </div>
+        <div className="form-group">
+          <label htmlFor="item-price">Price</label>
+          <input type="number" step="any" min="0" className="form-control" id="item-price" ref="price" />
+        </div>
+        <div className="form-group">
+          <label htmlFor="item-stock">Stock</label>
+          <input type="number" min="0" className="form-control" id="item-stock" ref="stock" />
+        </div>
+        <button type="submit" className="btn btn-default">Confirm</button>
       </form>
     );
   }

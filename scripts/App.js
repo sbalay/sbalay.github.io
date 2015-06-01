@@ -8,12 +8,14 @@ export default class App extends React.Component {
 
   render() {
     return (
-      <div className="shopping-cart-app">
+      <div className="shopping-cart-app container">
         <NewItemForm onNewItem={this.addNewItem.bind(this)} />
-        <ShoppingItemsList items={this.state.shoppingItems}
-                           onItemAddedToCart={this.addItemToCart.bind(this)} />
-        <ShoppingCart items={this.state.cartItems}
-                      onItemRemovedFromCart={this.removeItemFromCart.bind(this)} />
+        <div className="row">
+          <ShoppingItemsList items={this.state.shoppingItems}
+                             onItemAddedToCart={this.addItemToCart.bind(this)} />
+          <ShoppingCart items={this.state.cartItems}
+                        onItemRemovedFromCart={this.removeItemFromCart.bind(this)} />
+        </div>
       </div>
     );
   }

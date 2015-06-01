@@ -3,10 +3,10 @@ import React from 'react';
 export default class CartItem extends React.Component {
   render() {
     return (
-      <div className="cartItem">
-        <span>{this.props.item.name}</span>
-        <span>{this.props.item.price}</span>
-        <button onClick={this.handleClick.bind(this)}>Remove from cart</button>
+      <div className="cart-item">
+        <h2>{this.props.item.name}</h2>
+        <h4>Price: {this.props.item.price}</h4>
+        <button className="btn btn-default" onClick={this.handleClick.bind(this)}>Remove from cart</button>
       </div>
     );
   }

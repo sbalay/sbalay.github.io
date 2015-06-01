@@ -9,7 +9,7 @@ export default class ShoppingItemsList extends React.Component {
         );
     });
     return (
-      <div className="shopping-items-list">
+      <div className="shopping-items-list col-xs-8">
         {itemNodes}
       </div>
     );
