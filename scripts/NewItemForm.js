@@ -4,6 +4,7 @@ export default class NewItemForm extends React.Component {
   render() {
     return (
       <form className="form-inline new-item-form row" onSubmit={this.handleSubmit.bind(this)}>
+        <h2>Create your sale item!</h2>
         <div className="form-group">
           <label htmlFor="item-name">Name</label>
           <input type="text" className="form-control" id="item-name" ref="name" />
