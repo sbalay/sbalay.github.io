@@ -10,6 +10,7 @@ export default class ShoppingCart extends React.Component {
     });
     return (
       <div className="shopping-cart-container col-xs-4">
+        <h2>Your shopping cart</h2>
         {itemNodes}
       </div>
     );
